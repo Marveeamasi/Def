@@ -29,7 +29,7 @@ app.use(cors({
 }));
 
 // Encryption settings
-const adminEmail = "amasimarvellous@gmail.com";
+const adminEmail = "joelrubby518@gmail.com";
 const encryptionKey = "12345678901234567890123456789012";
 
 function encrypt(text) {
