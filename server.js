@@ -1,6 +1,7 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const crypto = require('crypto');
+const cors = require('cors');
 const { initializeApp } = require('firebase/app');
 const { getDatabase, ref, get, set } = require('firebase/database');
 
@@ -20,6 +21,12 @@ const db = getDatabase(firebaseApp);
 
 // Middleware
 app.use(express.json());
+
+app.use(cors({
+  origin: '*',
+  methods: ['POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type']
+}));
 
 // Encryption settings
 const adminEmail = "amasimarvellous@gmail.com";
