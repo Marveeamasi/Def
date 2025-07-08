@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "functions": {
+    "api/email.js": {
+      "memory": 128,
+      "maxDuration": 10
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/email",
+      "destination": "/api/email.js"
+    }
+  ]
+}
